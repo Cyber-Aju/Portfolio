@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Site</title>
+  <style>
+    #roles {
+      font-size: 24px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hi! I'm Ajmal.</h1>
+  <p id="roles"></p>
+
+  <script>
+    const roles = ["Engineer","Coder", "Software Developer", "Tech Enthusiast", "Learner"];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isTyping = true;
+
+    function typeRoles() {
+      const role = roles[roleIndex];
+      const displayText = role.substring(0, charIndex);
+      document.getElementById("roles").textContent = displayText;
+
+      if (isTyping) {
+        charIndex++;
+
+        if (charIndex > role.length) {
+          isTyping = false;
+          setTimeout(() => {
+            isTyping = true;
+            backspaceRoles();
+          }, 2000); // Wait for 2 seconds before backspacing
+        }
+      }
+
+      setTimeout(typeRoles, 100); // Typing speed (adjust as needed)
+    }
+
+    function backspaceRoles() {
+      const role = roles[roleIndex];
+      const displayText = role.substring(0, charIndex);
+      document.getElementById("roles").textContent = displayText;
+
+      charIndex--;
+
+      if (charIndex < 0) {
+        isTyping = true;
+        roleIndex = (roleIndex + 1) % roles.length;
+        setTimeout(typeRoles, 500); // Wait for 0.5 seconds before typing the next role
+      } else {
+        setTimeout(backspaceRoles, 50); // Backspacing speed (adjust as needed)
+      }
+    }
+
+    // Start the typing animation
+    typeRoles();
+  </script>
+</body>
+</html>
+
+
