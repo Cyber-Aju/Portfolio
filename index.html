@@ -15,7 +15,9 @@
   <link rel="shortcut icon" href="./android-chrome-512x512.png" type="image/png+xml">
 
   <!--custom css link-->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
+
+  <!--<script src="timeline.js" ></script>-->
 
   <!--google font link-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -177,127 +179,99 @@
         </ul>
       </section>
 
-
-
-
-
-      <!-- 
-        - #ABOUT
-      -->
+      <!-- #ABOUT-->
       <a href="./suma2.html"></a>
       <section class="about" id="about">
 
-<!-- Replace the <figure> tag with the interactive text update -->
-  <div class="about-banner">
-    <h1 class="hero-title">Hi! I'm Ajmal.</h1>
-    <p id="roles" class="hero-title"></p>
-  </div>
-  
-  <script>
-    const roles = ["Coder", "Software Developer", "Tech Enthusiast", "Learner"];
-    let roleIndex = 0;
-    let charIndex = 0;
-    let isTyping = true;
-  
-    function typeRoles() {
-      const role = roles[roleIndex];
-      const displayText = role.substring(0, charIndex);
-      document.getElementById("roles").textContent = displayText;
-  
-      if (isTyping) {
-        charIndex++;
-  
-        if (charIndex > role.length) {
-          isTyping = false;
+        <!-- Replace the <figure> tag with the interactive text update -->
+        <div class="about-banner">
+          <h1 class="hero-title">Hi! I'm Ajmal.</h1>
+          <p id="roles" class="hero-title"></p>
+        </div>
+        <script>
+          const roles = ["Engineer", "Coder", "Developer", "Tech Enthusiast", "Learner"];
+          let roleIndex = 0;
+          let charIndex = 0;
+          let isTyping = true;
+      
+          function typeRoles() {
+              const role = roles[roleIndex];
+              const displayText = role.substring(0, charIndex);
+              document.getElementById("roles").textContent = displayText;
+      
+              if (isTyping) {
+                  charIndex++;
+      
+                  if (charIndex > role.length) {
+                      isTyping = false;
+                      setTimeout(() => {
+                          isTyping = true;
+                          backspaceRoles();
+                      }, 2000); // Wait for 2 seconds before backspacing
+                  }
+              }
+      
+              setTimeout(typeRoles, 100); // Typing speed (adjust as needed)
+          }
+      
+          function backspaceRoles() {
+              const role = roles[roleIndex];
+              const displayText = role.substring(0, charIndex);
+              document.getElementById("roles").textContent = displayText;
+              charIndex--;
+      
+              if (charIndex < 0) {
+                  isTyping = true;
+                  roleIndex = (roleIndex + 1) % roles.length;
+                  setTimeout(typeRoles, 500); // Wait for 0.5 seconds before typing the next role
+              } else {
+                  setTimeout(backspaceRoles, 50); // Backspacing speed (adjust as needed)
+              }
+          }
+      
+          // Start the typing animation
+          typeRoles();
+      
+          // Run constantly without speedup after 2 minutes
           setTimeout(() => {
-            isTyping = true;
-            backspaceRoles();
-          }, 2000); // Wait for 2 seconds before backspacing
-        }
-      }
-  
-      setTimeout(typeRoles, 100); // Typing speed (adjust as needed)
-    }
-  
-    function backspaceRoles() {
-      const role = roles[roleIndex];
-      const displayText = role.substring(0, charIndex);
-      document.getElementById("roles").textContent = displayText;
-  
-      charIndex--;
-  
-      if (charIndex < 0) {
-        isTyping = true;
-        roleIndex = (roleIndex + 1) % roles.length;
-        setTimeout(typeRoles, 500); // Wait for 0.5 seconds before typing the next role
-      } else {
-        setTimeout(backspaceRoles, 50); // Backspacing speed (adjust as needed)
-      }
-    }
-  
-    // Start the typing animation
-    typeRoles();
-  </script>
-  
-
+              setInterval(() => {
+                  typeRoles();
+              }, 2500); // Adjust the interval as needed
+          }, 120000); // 2 minutes in milliseconds
+        </script>
         <div class="about-content section-content">
-
           <p class="section-subtitle">About me</p>
-
           <h2 class="h3 section-title">Empowering the Future with Code & Tools!</h2>
-
           <p class="section-text">
             Computer Science & Engineering Student with a Passion for Learning, Coding, Web Development, and Design. Passionate about creating innovative and user-centric web solutions. Experience in Front-end and has focused on learning the MERN stack and C++. Objective is to contribute to impactful projects and stay updated with emerging trends in the industry. Committed to continuous growth, aim to make a meaningful impact and advance in the field of web development & blockchain technology.
           </p>
-
           <div class="btn-group">
             <button class="btn btn-secondary">Hire me</button>
-
             <button class="btn btn-primary">Download cv</button>
           </div>
-
         </div>
-
       </section>
 
-
-
-
-
-      <!-- 
-        - #SKILLS
-      -->
-
+      <!--#SKILLS-->
       <section class="skills" id="skills">
-
         <div class="skills-content section-content">
-
           <p class="section-subtitle">My skills</p>
-
           <h2 class="h3 section-title">What My Programming Skills Included?</h2>
-
           <p class="section-text">
-            I develop simple, intuitive and responsive user interface that helps users get things done with less effort
-            and time
-            with those technologies.
+            I develop simple, intuitive user interface that helps users get things done with less effort
+            and time with those technologies and also I have knowledge about Backend Structures.
           </p>
-
           <div class="skills-toggle" data-toggle-box>
             <button class="toggle-btn active" data-toggle-btn>Skills</button>
-
             <button class="toggle-btn" data-toggle-btn>Tools</button>
           </div>
-
         </div>
 
         <div class="skills-box" data-skills-box>
-
           <ul class="skills-list">
-
             <li>
               <div class="skill-card">
                 <div class="tooltip">HTML5</div>
-
                 <div class="card-icon">
                   <img src="./assets/images/html5.png" alt="HTML5 logo">
                 </div>
@@ -307,7 +281,6 @@
             <li>
               <div class="skill-card">
                 <div class="tooltip">CSS3</div>
-
                 <div class="card-icon">
                   <img src="./assets/images/css3.png" alt="CSS3 logo">
                 </div>
@@ -317,7 +290,6 @@
             <li>
               <div class="skill-card">
                 <div class="tooltip">JavaScript</div>
-
                 <div class="card-icon">
                   <img src="./assets/images/javascript.png" alt="JavaScript logo">
                 </div>
@@ -326,10 +298,9 @@
 
             <li>
               <div class="skill-card">
-                <div class="tooltip">TypeScript</div>
-
+                <div class="tooltip">C/C++</div>
                 <div class="card-icon">
-                  <img src="./assets/images/typescript.png" alt="TypeScript logo">
+                  <img src="./assets/images/cpp1.png" alt="Cpp logo">
                 </div>
               </div>
             </li>
@@ -337,7 +308,6 @@
             <li>
               <div class="skill-card">
                 <div class="tooltip">jQuery</div>
-
                 <div class="card-icon">
                   <img src="./assets/images/jquery.png" alt="jQuery logo">
                 </div>
@@ -347,7 +317,6 @@
             <li>
               <div class="skill-card">
                 <div class="tooltip">Bootstrap</div>
-
                 <div class="card-icon">
                   <img src="./assets/images/bootstrap.png" alt="Bootstrap logo">
                 </div>
@@ -356,18 +325,7 @@
 
             <li>
               <div class="skill-card">
-                <div class="tooltip">Angular</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/angular.png" alt="Angular logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
                 <div class="tooltip">React</div>
-
                 <div class="card-icon">
                   <img src="./assets/images/react.png" alt="React logo">
                 </div>
@@ -376,74 +334,20 @@
 
             <li>
               <div class="skill-card">
-                <div class="tooltip">Vue</div>
-
+                <div class="tooltip">Salesforce</div>
                 <div class="card-icon">
-                  <img src="./assets/images/vue.png" alt="Vue logo">
+                  <img src="./assets/images/salesforce.png" alt="Salesforce logo">
                 </div>
               </div>
             </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Firebase</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/firebase.png" alt="Firebase logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">PugJs</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/pugjs.png" alt="PugJs logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">SASS</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/sass.png" alt="SASS logo">
-                </div>
-              </div>
-            </li>
-
           </ul>
 
           <ul class="tools-list">
-
             <li>
               <div class="skill-card">
-                <div class="tooltip">Ajax</div>
-
+                <div class="tooltip">Github</div>
                 <div class="card-icon">
-                  <img src="./assets/images/ajax.png" alt="Ajax logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Gulp</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/gulp.png" alt="Gulp logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Webpack</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/webpack.png" alt="Webpack logo">
+                  <img src="./assets/images/github.png" alt="Github logo">
                 </div>
               </div>
             </li>
@@ -451,7 +355,6 @@
             <li>
               <div class="skill-card">
                 <div class="tooltip">Git</div>
-
                 <div class="card-icon">
                   <img src="./assets/images/git.png" alt="Git logo">
                 </div>
@@ -461,7 +364,6 @@
             <li>
               <div class="skill-card">
                 <div class="tooltip">Npm</div>
-
                 <div class="card-icon">
                   <img src="./assets/images/npm.png" alt="Npm logo">
                 </div>
@@ -471,7 +373,6 @@
             <li>
               <div class="skill-card">
                 <div class="tooltip">Command Line</div>
-
                 <div class="card-icon">
                   <img src="./assets/images/command.png" alt="Command Line logo">
                 </div>
@@ -481,7 +382,6 @@
             <li>
               <div class="skill-card">
                 <div class="tooltip">VS Code</div>
-
                 <div class="card-icon">
                   <img src="./assets/images/vs-code.png" alt="VS Code logo">
                 </div>
@@ -490,246 +390,74 @@
 
             <li>
               <div class="skill-card">
-                <div class="tooltip">Trello</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/trello.png" alt="Trello logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">ClickUp</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/clickup.png" alt="ClickUp logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Slack</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/slack.png" alt="Slack logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
                 <div class="tooltip">Photoshop</div>
-
                 <div class="card-icon">
                   <img src="./assets/images/photoshop.png" alt="Photoshop logo">
                 </div>
               </div>
             </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Adobe XD</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/adobe-xd.png" alt="Adobe XD logo">
-                </div>
-              </div>
-            </li>
-
           </ul>
-
         </div>
-
       </section>
 
-
-
-
-
-      <!-- 
-        - #PROJECTS
-      -->
-
+      <!-- #PROJECTS-->
       <section class="project" id="portfolio">
-
         <ul class="project-list">
-
           <li>
             <div class="project-content section-content">
-
               <p class="section-subtitle">Education</p>
-
-              <h2 class="h3 section-title">See courses that offer!</h2>
-
+              <h2 class="h3 section-title">Edu!</h2>
               <p class="section-text">
-                We develop the best quality website that serves for the long-term. Well-documented, clean, easy and
-                elegant interface
-                helps any non-technical clients.
+                Well-documented, clean, easy and elegant interface helps any non-technical clients.
               </p>
-
             </div>
           </li>
 
           <li>
-            <a href="#" class="project-card">
-
-              <figure class="card-banner">
-                <img src="./assets/images/project-1.png" class="w-100" alt="A macintosh on a yellow background.">
-              </figure>
-
-              <div class="card-content">
-                <h3 class="h4 card-title">Lorem Ipsum Dolor 01</h3>
-
-                <time class="publish-date" datetime="2022-04">April 2022</time>
-              </div>
-
-            </a>
+            <a href="#" class="project-card"></a>
           </li>
-
-          <li>
-            <a href="#" class="project-card">
-
-              <figure class="card-banner">
-                <img src="./assets/images/project-2.png" class="w-100" alt="On a Blue background, a Wacom and a mouse.">
-              </figure>
-
-              <div class="card-content">
-                <h3 class="h4 card-title">Lorem Ipsum Dolor 02</h3>
-
-                <time class="publish-date" datetime="2022-04">April 2022</time>
-              </div>
-
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="project-card">
-
-              <figure class="card-banner">
-                <img src="./assets/images/project-3.png" class="w-100"
-                  alt="A Cassette tape on a mellow apricot background.">
-              </figure>
-
-              <div class="card-content">
-                <h3 class="h4 card-title">Lorem Ipsum Dolor 03</h3>
-
-                <time class="publish-date" datetime="2022-04">April 2022</time>
-              </div>
-
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="project-card">
-
-              <figure class="card-banner">
-                <img src="./assets/images/project-4.png" class="w-100"
-                  alt="Blue digital watch on a dark liver background.">
-              </figure>
-
-              <div class="card-content">
-                <h3 class="h4 card-title">Lorem Ipsum Dolor 04</h3>
-
-                <time class="publish-date" datetime="2022-04">April 2022</time>
-              </div>
-
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="project-card">
-
-              <figure class="card-banner">
-                <img src="./assets/images/project-5.png" class="w-100"
-                  alt="On a dark liver background, Airport luggage car carrying a luggage.">
-              </figure>
-
-              <div class="card-content">
-                <h3 class="h4 card-title">Lorem Ipsum Dolor 05</h3>
-
-                <time class="publish-date" datetime="2022-04">April 2022</time>
-              </div>
-
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="project-card">
-
-              <figure class="card-banner">
-                <img src="./assets/images/project-6.png" class="w-100"
-                  alt="On a yellow background, a digital watch and a glass.">
-              </figure>
-
-              <div class="card-content">
-                <h3 class="h4 card-title">Lorem Ipsum Dolor 06</h3>
-
-                <time class="publish-date" datetime="2022-04">April 2022</time>
-              </div>
-
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="project-card">
-
-              <figure class="card-banner">
-                <img src="./assets/images/project-7.png" class="w-100"
-                  alt="A fujifilm instant camera on a dark electric blue background.">
-              </figure>
-
-              <div class="card-content">
-                <h3 class="h4 card-title">Lorem Ipsum Dolor 07</h3>
-
-                <time class="publish-date" datetime="2022-04">April 2022</time>
-              </div>
-
-            </a>
-          </li>
-
-          <li>
-            <button class="load-more">Load more work</button>
-          </li>
-
         </ul>
 
       </section>
 
-<section class="timeline-section">
-  <!--Put all that should be in the timeline inside a ul tag-->
-  
-<script src="/timeline.js"></script>
-  <uL>
+      <section class="timeline-section">
+      <!--Put all that should be in the timeline inside a ul tag-->
+      <uL>
       <li>
           <div>
               <!--Use the time tag-->
-            <time>2018</time> Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Incidunt nostrum quidem eius repudiandae nam, nemo fuga
-            architecto possimus id at rem beatae consequuntur dolor commodi.
+            <time>2018-19</time>
+            <p style="color: aliceblue;">
+              Bharathi Vidyalaya Higher Secondary School. 
+              <br>
+              SSLC | Percentage : 87%.
+            </p>
           </div>
       </li>
         
       <li>
         <div>
-          <time>2020</time> Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Incidunt nostrum quidem eius repudiandae nam, nemo fuga
-          architecto possimus id at rem beatae consequuntur dolor commodi.
+          <time>2019-20</time>
+          <p style="color: aliceblue;">
+            Bharathi Vidyalaya Higher Secondary School. 
+            <br>
+            HSC | Percentage : 61%.
+          </p>
         </div> 
       </li>
 
       <li>
           <div>
-            <time>2024</time> Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Incidunt nostrum quidem eius repudiandae nam, nemo fuga
-            architecto possimus id at rem beatae consequuntur dolor commodi.
+            <time>2020-24</time>
+            <p style="color: aliceblue;">
+              AVS Engineering College. 
+              <br>
+              B.E(Computer Science & Engineering) | CGPA : 8.27.
+            </p>
           </div>
       </li>
   </uL>
 </section>
-<script src="timeline.js">
-</script>
 
 
 
@@ -963,7 +691,7 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+  <script src="timeline.js" ></script>
 </body>
 
 </html>
