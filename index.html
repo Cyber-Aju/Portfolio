@@ -233,8 +233,8 @@
             <a href="mailto:ajmalakram152@gmail" class="contact-info">
                 <button class="btn btn-secondary">Hire me</button>
             </a>
-            <a href="#" class="contact-info" >
-                <button class="btn btn-primary">Download CV</button>
+            <a href="./assets/Ajmal Akram S 2024 .html" class="contact-info" >
+                <button class="btn btn-primary">Resume</button>
             </a>
         </div>
         
@@ -556,7 +556,11 @@
         </a>
       </p>
       <p class="copyright">
-        &copy; 2024 <a href="#">Loner-Bytes</a>. <br>
+        <script>
+          var date = document.write(new Date().getFullYear());
+          document.getElementById("copyright").innerHTML = date;
+        </script>
+        &copy;<span id="copyright"></span><a href="#">Loner-Bytes</a>. <br>
     </div>
       </p>
       <p style="color:deepskyblue; font-family: var(--ff-poppins);">Coding is not just a skill, it's an art form..! 🚀 </p>
