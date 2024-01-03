@@ -166,7 +166,7 @@
     color: var(--black);
   }
   
-  .btn-secondary:is(:hover, :focus) { --raw-seinna: hsl(24, 74%, 64%); }
+  .btn-secondary:is(:hover, :focus) { --raw-seinna: hsl(56, 74%, 64%); }
   
   .section-subtitle {
     position: relative;
