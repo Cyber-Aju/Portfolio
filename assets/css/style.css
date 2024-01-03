@@ -1,39 +1,19 @@
 /*-----------------------------------*\
- * style.css
-\*-----------------------------------*/
-
-/**
- * copyright 2022 codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
  * #CUSTOM PROPERTY
 \*-----------------------------------*/
-
 :root {
-
-    /**
-     * colors
-     */
-  
+    /**colors*/
     --raw-seinna: hsl(202, 74%, 58%);
     --sizzling-sunrise: hsl(51, 95%, 54%);
     --scarlet: hsl(310, 96%, 47%);
     --black: hsl(0, 0%, 0%);
     --white: hsl(0, 0%, 100%);
   
-    /**
-     * typography
-     */
-  
+    /**typography*/
     --ff-saira-stencil-one: "Saira Stencil One", sans-serif; 
     --ff-poppins: 'Poppins', sans-serif;
     --ff-roboto: 'Roboto', sans-serif;
-  
+
     --fs-1: 2rem;
     --fs-2: calc(1.813rem + 1vw);
     --fs-3: calc(1.313rem + 1vw);
@@ -45,69 +25,39 @@
     --fw-400: 400;
     --fw-700: 700;
   
-    /**
-     * transition
-     */
-  
+    /**transition*/
     --transition-1: 0.25s ease-in-out;
   
-    /**
-     * spacing
-     */
-  
+    /**spacing*/
     --section-padding: 80px;
   
-    /**
-     * radius
-     */
-  
+    /**radius*/
     --radius-4: 4px;
     --radius-12: 12px;
-  
   }
   
-  
-  
-  
-  
-  /*-----------------------------------*\
-   * #THEME COLORS
-  \*-----------------------------------*/
-  
+  /*#THEME COLORS*/
   body.dark_theme {
-  
     --bg-primary: hsl(0, 0%, 12%);
     --bg-secondary: hsl(0, 0%, 19%);
     --color-primary: hsl(0, 0%, 100%);
     --color-secondary: hsl(0, 0%, 62%);
     --card-shadow: hsla(0, 0%, 0%, 0.4);
     --input-bg: hsl(0, 0%, 16%);
-  
     --shadow-1: 10px 10px 40px var(--card-shadow);
-  
   }
   
   body.light_theme {
-  
     --bg-primary: hsl(0, 0%, 90%);
     --bg-secondary: hsl(0, 0%, 100%);
     --color-primary: hsl(0, 0%, 12%);
     --color-secondary: hsl(0, 0%, 37%);
     --card-shadow: hsla(0, 0%, 0%, 0.1);
     --input-bg: hsl(0, 0%, 93%);
-  
     --shadow-1: 10px 10px 40px var(--card-shadow);
-  
   }
-  
-  
-  
-  
-  
-  /*-----------------------------------*\
-   * #RESET
-  \*-----------------------------------*/
-  
+
+  /*#RESET*/
   *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -115,9 +65,7 @@
   }
   
   li { list-style: none; }
-  
   a { text-decoration: none; }
-  
   a,
   img,
   time,
@@ -168,14 +116,7 @@
   
   body.active { overflow: hidden; }
   
-  
-  
-  
-  
-  /*-----------------------------------*\
-   * #REUSED STYLE
-  \*-----------------------------------*/
-  
+  /*#REUSED STYLE*/
   .container { padding-inline: 10px; }
   
   .h1 {
@@ -273,15 +214,8 @@
     transition: var(--transition-1);
     z-index: 1;
   }
-  
-  
-  
-  
-  
-  /*-----------------------------------*\
-   * #HEADER
-  \*-----------------------------------*/
-  
+
+  /*#HEADER*/
   .header {
     padding-block: 15px;
     position: fixed;
@@ -451,15 +385,8 @@
   }
   
   .navbar-link:is(:hover, :focus)::before { width: 100%; }
-  
-  
-  
-  
-  
-  /*-----------------------------------*\
-   * #HERO
-  \*-----------------------------------*/
-  
+
+  /*#HERO*/
   main { overflow-x: hidden; }
   
   .hero {
@@ -509,14 +436,7 @@
   
   .hero .btn-primary { margin-inline: auto; }
   
-  
-  
-  
-  
-  /*-----------------------------------*\
-   * #STATS
-  \*-----------------------------------*/
-  
+  /*#STATS*/
   .stats { padding-block: var(--section-padding); }
   
   .stats-list {
@@ -567,15 +487,7 @@
   
   .stats-card > ion-icon { color: var(--color-secondary); }
   
-  
-  
-  
-  
-  /*-----------------------------------*\
-   * #ABOUT
-  \*-----------------------------------*/
-
-
+  /*#ABOUT*/
   .about { padding-block: var(--section-padding); }
   
   .about-banner {
@@ -590,15 +502,8 @@
   }
   
   .about .btn-secondary { margin-bottom: 10px; }
-  
-  
-  
-  
-  
-  /*-----------------------------------*\
-   * #SKILLS
-  \*-----------------------------------*/
-  
+
+  /*#SKILLS*/
   .skills { padding-block: var(--section-padding); }
   
   .skills-content { margin-bottom: 50px; }
@@ -680,14 +585,7 @@
     opacity: 1;
   }
   
-  
-  
-  
-  
-  /*-----------------------------------*\
-   * #PROJECT
-  \*-----------------------------------*/
-  
+  /*#PROJECT*/
   .project { padding-block: var(--section-padding); }
   
   .project-list > li { margin-bottom: 25px; }
@@ -752,14 +650,7 @@
     margin-inline: auto;
   }
   
-  
-  
-  
-  
-  /*-----------------------------------*\
-   * #CONTACT
-  \*-----------------------------------*/
-  
+  /*#CONTACT*/
   .contact { padding-block: var(--section-padding); }
   
   .contact-content { margin-bottom: 50px; }
@@ -874,15 +765,8 @@
     background: var(--color-primary);
     color: var(--bg-primary);
   }
-  
-  
-  
-  
-  
-  /*-----------------------------------*\
-   * #FOOTER
-  \*-----------------------------------*/
-  
+
+  /*#FOOTER*/
   .footer {
     background: var(--bg-secondary);
     padding-block: 20px;
@@ -901,15 +785,8 @@
     display: inline-block;
     color: var(--raw-seinna);
   }
-  
-  
-  
-  
-  
-  /*-----------------------------------*\
-   * #GO TO TOP
-  \*-----------------------------------*/
-  
+
+  /*#GO TO TOP*/
   .go-top {
     position: fixed;
     bottom: 25px;
@@ -935,78 +812,38 @@
     transform: translateY(0);
   }
   
-  
-  
-  
-  
-  /*-----------------------------------*\
-   * #MEDIA QUERIES
-  \*-----------------------------------*/
-  
-  /**
-   * responsive for larger than 550px screen
-   */
-  
+  /*#MEDIA QUERIES*/
+  /**responsive for larger than 550px screen*/
   @media (min-width: 550px) {
   
-    /**
-     * REUSED STYLE
-     */
-  
+    /*REUSED STYLE*/
     .container {
       max-width: 550px;
       margin-inline: auto;
     }
   
     .section-title { max-width: 380px; }
-  
-  
-  
-    /**
-     * PROJECT
-     */
-  
+
+    /**PROJECT*/
     .project-list {
       column-count: 2;
       column-gap: 25px;
     }
-  
+
     .project-list > li:first-child { column-span: all; }
-  
   }
   
-  
-  
-  
-  
-  /**
-   * responsive for larger than 768px screen
-   */
-  
+  /**responsive for larger than 768px screen*/
   @media (min-width: 768px) {
-  
-    /**
-     * REUSED STYLE
-     */
-  
+    /**REUSED STYLE*/
     .container { max-width: 720px; }
   
     .section-title { max-width: 430px; }
   
-  
-  
-    /**
-     * STATS
-     */
-  
+    /**STATS*/
     .stats-list { grid-template-columns: 1fr 1fr; }
   
-  
-  
-    /**
-     * ABOUT
-     */
-  
+    /**ABOUT*/
     .btn-group {
       display: flex;
       justify-content: flex-start;
@@ -1018,55 +855,25 @@
   
     .about .btn-secondary { margin-bottom: 0; }
   
-  
-  
-    /**
-     * CONTACT
-     */
-  
+    /**CONTACT*/
     .contact-form {
       max-width: 450px;
       margin-inline: auto;
     }
-  
   }
   
-  
-  
-  
-  
-  /**
-   * responsive for larger than 992px screen
-   */
-  
+  /**responsive for larger than 992px screen*/
   @media (min-width: 992px) {
-  
-    /**
-     * CUSTOM PROPERTY
-     */
-  
+    /**CUSTOM PROPERTY*/
     :root {
-  
-      /**
-       * typography
-       */
-  
+      /**typography*/
       --fs-2: 3rem;
   
-      /**
-       * spacing
-       */
-  
+      /**spacing*/
       --section-padding: 100px;
-  
     }
   
-  
-  
-    /**
-     * REUSED STYLE
-     */
-  
+    /**REUSED STYLE*/
     .container { max-width: 980px; }
   
     .section-content {
@@ -1088,13 +895,8 @@
       left: auto;
       right: calc(100% + 20px);
     }
-  
-  
-  
-    /**
-     * HEADER
-     */
-  
+
+    /**HEADER*/
     .header { padding-block: 30px; }
   
     .header.active { padding-block: 15px; }
@@ -1129,12 +931,7 @@
   
     .navbar-link::before { height: 2px; }
   
-  
-  
-    /**
-     * HERO
-     */
-  
+    /**HERO*/
     .hero {
       position: relative;
       padding-top: 0;
@@ -1226,23 +1023,12 @@
       background: var(--color-secondary);
     }
   
-  
-  
-    /**
-     * STATS
-     */
-  
+    /**STATS*/
     .stats-list { grid-template-columns: repeat(3, 1fr); }
   
     .stats-card { height: 100%; }
-  
-  
-  
-  
-    /**
-     * ABOUT
-     */
-  
+
+    /*ABOUT*/
     .about {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -1252,13 +1038,7 @@
   
     .about-banner { margin-bottom: 0; }
   
-  
-  
-  
-    /**
-     * SKILLS
-     */
-  
+    /**SKILLS*/
     .skills {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -1270,12 +1050,7 @@
   
     .skills-toggle { margin-inline: 0; }
   
-  
-  
-    /**
-     * PROJECT
-     */
-  
+    /**PROJECT*/
     .project-list { column-count: 3; }
   
     .project-list > li:first-child {
@@ -1284,12 +1059,7 @@
       margin-left: 0;
     }
   
-  
-  
-    /**
-     * CONTACT
-     */
-  
+    /**CONTACT*/
     .contact {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -1302,12 +1072,7 @@
   
     .contact-list { margin-left: -40px; }
   
-  
-  
-    /**
-     * FOOTER
-     */
-  
+    /**FOOTER*/
     .footer .container {
       display: flex;
       justify-content: space-between;
@@ -1315,53 +1080,25 @@
     }
   
     .footer .logo { margin-bottom: 0; }
-  
   }
   
-  
-  
-  
-  
-  /**
-   * responsive for larger than 1200px screen
-   */
-  
+  /** responsive for larger than 1200px screen*/
   @media (min-width: 1200px) {
-  
-    /**
-     * REUSED STYLE
-     */
-  
+    /**REUSED STYLE*/
     .container { max-width: 1150px; }
   
     .section-title { max-width: 460px; }
   
-  
-  
-  
-    /**
-     * HERO
-     */
-  
+    /**HERO*/
     .hero-social-list { left: -80px; }
   
     .scroll-down { right: -80px; }
   
-  
-  
-  
-    /**
-     * ABOUT
-     */
-  
+     /**ABOUT*/
     .about-banner { max-width: 450px; }
-  
   }
 
-
-  /*
-  Timeline
-  */
+  /**#TIMELINE*/
   .timeline-section {
     width: 100%;
     overflow: hidden;  /* creates block formatting context */
@@ -1424,7 +1161,9 @@
     bottom: 7px;
     width: 0;
     height: 0;
-    border-style: solid;
+    background-image: url('triangle-image.png'); /* Replace 'triangle-image.png' with your image path */
+    background-size: contain; /* Ensure the image fits within the specified width and height */
+    background-repeat: no-repeat;
 }
 
 /*This is to select the divs at odd position so we can separate the divs to the right part*/
@@ -1524,4 +1263,4 @@ time {
     }
 }
 
-.container-fluid { padding: 7% 15%; }
+  .container-fluid { padding: 7% 15%; }
