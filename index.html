@@ -180,10 +180,7 @@
       </section>
 
       <!-- #ABOUT-->
-      <a href="./suma2.html"></a>
       <section class="about" id="about">
-
-        <!-- Replace the <figure> tag with the interactive text update -->
         <div class="about-banner">
           <h1 class="hero-title">Hi! I'm Ajmal.</h1>
           <p id="roles" class="hero-title"></p>
@@ -192,52 +189,38 @@
           const roles = ["Engineer", "Coder", "Developer", "Tech Enthusiast", "Learner"];
           let roleIndex = 0;
           let charIndex = 0;
-          let isTyping = true;
-      
-          function typeRoles() {
-              const role = roles[roleIndex];
-              const displayText = role.substring(0, charIndex);
-              document.getElementById("roles").textContent = displayText;
-      
-              if (isTyping) {
-                  charIndex++;
-      
-                  if (charIndex > role.length) {
-                      isTyping = false;
-                      setTimeout(() => {
-                          isTyping = true;
-                          backspaceRoles();
-                      }, 2000); // Wait for 2 seconds before backspacing
-                  }
-              }
-      
-              setTimeout(typeRoles, 100); // Typing speed (adjust as needed)
-          }
-      
-          function backspaceRoles() {
-              const role = roles[roleIndex];
-              const displayText = role.substring(0, charIndex);
-              document.getElementById("roles").textContent = displayText;
-              charIndex--;
-      
-              if (charIndex < 0) {
-                  isTyping = true;
-                  roleIndex = (roleIndex + 1) % roles.length;
-                  setTimeout(typeRoles, 500); // Wait for 0.5 seconds before typing the next role
-              } else {
-                  setTimeout(backspaceRoles, 50); // Backspacing speed (adjust as needed)
-              }
-          }
-      
-          // Start the typing animation
-          typeRoles();
-      
-          // Run constantly without speedup after 2 minutes
+
+          function updateRoles() {
+          const role = roles[roleIndex];
+          const displayText = role.substring(0, charIndex);
+          document.getElementById("roles").textContent = displayText;
+
+          if (charIndex < role.length) {
+          charIndex++;
+          setTimeout(updateRoles, 100); // Typing speed (adjust as needed)
+          } else {
           setTimeout(() => {
-              setInterval(() => {
-                  typeRoles();
-              }, 2500); // Adjust the interval as needed
-          }, 120000); // 2 minutes in milliseconds
+            backspaceRoles();
+            }, 2000); // Wait for 2 seconds before backspacing
+          }
+        }
+        function backspaceRoles() {
+        const role = roles[roleIndex];
+        const displayText = role.substring(0, charIndex);
+        document.getElementById("roles").textContent = displayText;
+
+        if (charIndex > 0) {
+          charIndex--;
+          setTimeout(backspaceRoles, 50); // Backspacing speed (adjust as needed)
+          } else {
+          roleIndex = (roleIndex + 1) % roles.length;
+          setTimeout(() => {
+             updateRoles();
+          }, 500); // Wait for 0.5 seconds before typing the next role
+        }
+        }
+      // Start the typing animation
+      updateRoles();
         </script>
         <div class="about-content section-content">
           <p class="section-subtitle">About me</p>
@@ -245,10 +228,17 @@
           <p class="section-text">
             Computer Science & Engineering Student with a Passion for Learning, Coding, Web Development, and Design. Passionate about creating innovative and user-centric web solutions. Experience in Front-end and has focused on learning the MERN stack and C++. Objective is to contribute to impactful projects and stay updated with emerging trends in the industry. Committed to continuous growth, aim to make a meaningful impact and advance in the field of web development & blockchain technology.
           </p>
+
           <div class="btn-group">
-            <button class="btn btn-secondary">Hire me</button>
-            <button class="btn btn-primary">Download cv</button>
-          </div>
+            <a href="mailto:ajmalakram152@gmail" class="contact-info">
+                <button class="btn btn-secondary">Hire me</button>
+            </a>
+            <a href="#" class="contact-info" >
+                <button class="btn btn-primary">Download CV</button>
+            </a>
+        </div>
+        
+        
         </div>
       </section>
 
@@ -406,22 +396,15 @@
           <li>
             <div class="project-content section-content">
               <p class="section-subtitle">Education</p>
-              <h2 class="h3 section-title">Edu!</h2>
-              <p class="section-text">
-              </p>
+              <h2 class="h3 section-title">Education</h2>
+              <p class="section-text">Engineering Tomorrow's Technology Today!!!</p>
             </div>
-          </li>
-
-          <li>
-            <a href="#" class="project-card"></a>
           </li>
         </ul>
         <section class="timeline-section">
-          <!--Put all that should be in the timeline inside a ul tag-->
           <uL>
           <li>
               <div style=" font-family: var(--ff-poppins); border-bottom-width: 0px; border-left-width: 0px; border-right-width: 0px; border-top-width:0px;">
-                  <!--Use the time tag-->
                 <time>2018-19</time>
                 <p style="color: aliceblue;">
                   Bharathi Vidyalaya Higher Secondary School. 
@@ -492,8 +475,8 @@
               </div>
               <div class="wrapper">
                 <h3 class="h4 contact-item-title">Email:</h3>
-                <a href="mailto:info@jack.com" class="contact-info">ajmalakram152@gmail.com</a>
-                <a href="mailto:support@jack.com" class="contact-info">cyber.aju1730@gmail.com</a>
+                <a href="mailto:ajmalakram152@gmail" class="contact-info">ajmalakram152@gmail.com</a>
+                <a href="mailto:cyber.aju1730@gmail" class="contact-info">cyber.aju1730@gmail.com</a>
               </div>
             </li>
 
