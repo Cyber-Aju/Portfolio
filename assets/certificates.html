@@ -4,27 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <!--custom css link-->
+  <link rel="stylesheet" href="./css/style.css" type="text/css">
     <title>Certifications and Badges - Ajmal Akram's Portfolio</title>
+
+    <!--favicon-->
+  <link rel="shortcut icon" href="../android-chrome-512x512.png" type="image/png+xml">
     <style>
-        body {
-            background: rgb(204, 204, 204);
-        }
-        
-        .container {
-            background: white;
-            display: block;
-            margin: 0 auto;
-            margin-bottom: 0.5cm;
-            box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
-        }
-        
-        header {
-            background-color: #2E74B5;
-            color: white;
-            text-align: center;
-            padding: 1em;
-        }
         
         .certifications {
             display: flex;
@@ -34,7 +20,7 @@
         }
         
         .certification {
-            background: #fff;
+           
             border: 1px solid #ddd;
             margin: 1em;
             padding: 1em;
@@ -47,111 +33,246 @@
             height: auto;
         }
         
-        /* Add more styling as needed */
-        
     </style>
+
+    <!--google font link-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&family=Saira+Stencil+One&display=swap"
+    rel="stylesheet">
 </head>
 
-<body>
-    <div class="container">
-        <header>
-            <h1>Certifications and Badges</h1>
-        </header>
+<body id="top" class="dark_theme">
+        <!-- #HEADER-->
+          <header class="header" data-header>
+            <div class="container">
         
+              <h1 class="h1 logo">
+                <a href="#">Ajmal<span>.Akram</span></a>
+              </h1>
+        
+              <div class="navbar-actions">
+        
+                <button class="theme-btn" aria-label="Change Theme" title="Change Theme" data-theme-btn>
+                  <span class="icon"></span>
+                </button>
+        
+              </div>
+        
+              <button class="nav-toggle-btn" aria-label="Toggle Menu" title="Toggle Menu" data-nav-toggle-btn>
+                <span class="one"></span>
+                <span class="two"></span>
+                <span class="three"></span>
+              </button>
+        
+              <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+        
+                  <li>
+                    <a href="#home" class="navbar-link">Home.</a>
+                  </li>
+        
+                  <li>
+                    <a href="#about" class="navbar-link">About.</a>
+                  </li>
+        
+                  <li>
+                    <a href="#skills" class="navbar-link">Skills.</a>
+                  </li>
+        
+                  <li>
+                    <a href="#portfolio" class="navbar-link">Education.</a>
+                  </li>
+        
+                  <li>
+                    <a href="https://cyber-aju.github.io/Blog/" class="navbar-link">Personal Blog.</a>
+                  </li>
+        
+                  <li>
+                    <a href=" https://cyber-aju.github.io/snapies/" class="navbar-link">Snapie's.</a>
+                  </li>
+        
+                  <li>
+                    <a href="#contact" class="navbar-link">Contact.</a>
+                  </li>
+        
+                </ul>
+              </nav>
+        
+            </div>
+          </header>
+
+    <div class="container"><br><br> <br><br><br> <br>
+            <h1 class="h3 section-title" style="text-align: center;">Certifications & Badges</h1>
         <section class="certifications">
-            <!-- Certification 1 -->
+
             <div class="certification">
-                <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-44e9285c-a0f1-4c4e-add8-b5ef3114ab12.jpg?v=1695996025000" alt="Certification 1">
-                <h2>Python Programming</h2>
-                <p>Description and details about the certification. Include date, issuer, etc.</p>
-            </div>
-            
-            <!-- Certification 2 -->
-            <div class="certification">
-                <img src="https://certificates-edu.s3.amazonaws.com/czoxMzoiNDU0MTQxMl8xMDIxOCI7" alt="Certification 2">
-                <h2>Certification Title 2</h2>
-                <p>Description and details about the certification. Include date, issuer, etc.</p>
-            </div>
-            
-            <div class="certification">
-                <img src="./images/accenture-forage.png" alt="Certification 2">
-                <h2>Certification Title 2</h2>
-                <p>Description and details about the certification. Include date, issuer, etc.</p>
+                <img src="./images/certify/computerfundamentals.jpeg" alt="Computer-fundamentals certification"> <br>
+                <h2 class="h3 section-title" style="font-size:larger;">Computer Fundamentals Certification</h2>
+                <p class="section-text">Successfully completed the "Computer Fundamentals" certification program, gaining foundational knowledge in essential computer skills like Basics of Microsoft Word, Microsoft PowerPoint Essentials, Introduction to Microsoft Excel.
+                <br><strong>Date of Certification:</strong> January 2023<br>
+                <strong>Issuer:</strong> Itronix Solution
+                </p>
             </div>
 
             <div class="certification">
-                <img src="./images/cognizant-forage.png" alt="Certification 2">
-                <h2>Certification Title 2</h2>
-                <p>Description and details about the certification. Include date, issuer, etc.</p>
+                <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-44e9285c-a0f1-4c4e-add8-b5ef3114ab12.jpg?v=1695996025000" alt="Python Certification"> <br>
+                <h2 class="h3 section-title" style="font-size:larger;">Python Programming</h2>
+                <p class="section-text">Achieved a certification in Python Programming with a special focus on the Object-Oriented Programming (OOP) paradigm. Explored essential tools and techniques for effective software development using Python.
+                   <br> <strong>Date of Completion:</strong> July 2022<br>
+        <strong>Issuer:</strong> Udemy
+                </p>
             </div>
 
             <div class="certification">
-                <img src="./images/web-forage.png" alt="Certification 2">
-                <h2>Certification Title 2</h2>
-                <p>Description and details about the certification. Include date, issuer, etc.</p>
+                <img src="./images/certify/cpp-MS.png" alt="C++ & VS Code - Microsoft Learn Student Ambassador Certification"> <br>
+                <h2 class="h3 section-title" style="font-size:larger;">C++ & VS Code - Microsoft Learn Student Ambassador Certification</h2>
+                <p class="section-text">Achieved the "C++ & VS Code" certification as part of the Microsoft Learn Student Ambassador program. This certification validates proficiency in C++ programming language and effective usage of Visual Studio Code (VS Code) for software development.
+                    <br> <strong>Date of Certification:</strong> June 2023<br>
+                    <strong>Issuer:</strong> Microsoft Learn Student Ambassador
+                </p>
             </div>
 
             <div class="certification">
-                <img src="./images/aws-devops.png" alt="Certification 2">
-                <h2>Certification Title 2</h2>
-                <p>Description and details about the certification. Include date, issuer, etc.</p>
+                <img src="https://certificates-edu.s3.amazonaws.com/czoxMzoiNDU0MTQxMl8xMDIxOCI7" alt="Photoshop certificaton"> <br>
+                <h2 class="h3 section-title" style="font-size:larger;">Designing using Adobe Photoshop</h2>
+                <p class="section-text">Successfully completed a certification in Designing using Adobe Photoshop, gaining hands-on skills in graphic design, image editing, and creative visual content creation.
+                    <br><strong>Date of Completion:</strong> January 2023<br>
+        <strong>Issuer:</strong> Eduonix
+                </p>
             </div>
 
             <div class="certification">
-                <img src="./images/computerfundamentals.jpeg" alt="Certification 2">
-                <h2>Certification Title 2</h2>
-                <p>Description and details about the certification. Include date, issuer, etc.</p>
+                <img src="./images/certify/figma.png" alt="Figma Certification"> <br>
+                <h2 class="h3 section-title" style="font-size:larger;">Figma workshop Certification</h2>
+                <p class="section-text">Acquiring skills in UI/UX design, prototyping, and collaborative design workflows.
+                    <br><strong>Date of Certification:</strong> September 2023<br>
+                </p>
             </div>
 
             <div class="certification">
-                <img src="./images/SA.png" alt="Certification 2">
-                <h2>Certification Title 2</h2>
-                <p>Description and details about the certification. Include date, issuer, etc.</p>
-            </div>
-
-            <div class="certification">
-                <img src="./images/Digital marketing-google.png" alt="Certification 2">
-                <h2>Certification Title 2</h2>
-                <p>Description and details about the certification. Include date, issuer, etc.</p>
-            </div>
-
-            <div class="certification">
-                <img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~5VHYSCRDU9WR/CERTIFICATE_LANDING_PAGE~5VHYSCRDU9WR.jpeg" alt="Certification 2">
-                <h2>Certification Title 2</h2>
-                <p>Description and details about the certification. Include date, issuer, etc.</p>
-            </div>
-
-            <div class="certification">
-                <img src="./images/low-level-design.png" alt="Certification 2">
-                <h2>Certification Title 2</h2>
-                <p>Description and details about the certification. Include date, issuer, etc.</p>
-            </div>
-
-            <div class="certification">
-                <img src="./images/cpp-MS.png" alt="Certification 2">
-                <h2>Certification Title 2</h2>
-                <p>Description and details about the certification. Include date, issuer, etc.</p>
-            </div>
-
-            <div class="certification">
-                <img src="./images/figma.png" alt="Certification 2">
-                <h2>Certification Title 2</h2>
-                <p>Description and details about the certification. Include date, issuer, etc.</p>
+                <img src="./images/certify/web-forage.png" alt="Web development Certification"> <br>
+                <h2 class="h3 section-title" style="font-size:larger;">Moreton Bay Regional Council Web Development Skills Certification</h2>
+                <p class="section-text">Completed the Web Development Skills Certification program offered by Moreton Bay Regional Council. Acquired a comprehensive skill set including Critical Thinking, CSS, HTML, Site Mapping, User Flow, Web Development, and WordPress. <br> <strong>Date of Certification:</strong> January 2023<br>
+                    <strong>Issuer:</strong> Forage
+            </p>
             </div>
             
             <div class="certification">
-                <img src="./images/NM-Bigdata.png" alt="Certification 2">
-                <h2>Certification Title 2</h2>
-                <p>Description and details about the certification. Include date, issuer, etc.</p>
+                <img src="./images/certify/accenture-forage.png" alt="virtual internship Certification"> <br>
+                <h2 class="h3 section-title" style="font-size:larger;">Accenture Developer Program</h2>
+                <p class="section-text">Completed the Accenture Developer Program, a comprehensive virtual internship where I acquired proficiency in various key skills including Access Management, Basic Programming, Debugging, Identity Management, Python, and Unit Testing. <br> <strong>Date of Completion:</strong> August 2022<br>
+                    <strong>Issuer:</strong> Forage</p>
             </div>
 
             <div class="certification">
-                <img src="./images/NM-Cisco.png" alt="Certification 2">
-                <h2>Certification Title 2</h2>
-                <p>Description and details about the certification. Include date, issuer, etc.</p>
+                <img src="./images/certify/aws-devops.png" alt="Devops AWS Certification"> <br>
+                <h2 class="h3 section-title" style="font-size:larger;">Getting Started with DevOps on AWS</h2>
+                <p class="section-text">"Getting Started with DevOps on AWS" certification program, acquiring essential knowledge and skills in DevOps methodologies, culture, practices, and tools.
+                    <br><strong>Date of Certification:</strong> January 2023<br>
+                    <strong>Issuer:</strong> AWS Skill Builder
+                </p>
+            </div>
+
+            <div class="certification">
+                <img src="./images/certify/SA.png" alt="Software architecture Certification"> <br>
+                <h2 class="h3 section-title" style="font-size:larger;">Software Architecture Certification</h2>
+                <p class="section-text">Completed the "Fundamentals of Software Architecture" certification program, gaining comprehensive knowledge in the principles and practices of software architecture like Fundamentals of Software Architecture,Understanding Software Design Patterns.
+                    <br><strong>Date of Certification:</strong> February 2023<br>
+                    <strong>Issuer:</strong> Europe University
+                </p>
+            </div>
+
+            <div class="certification">
+                <img src="./images/certify/cognizant-forage.png" alt="Agile Certification"> <br>
+                <h2 class="h3 section-title" style="font-size:larger;">Cognizant Agile Methodology Certification</h2>
+                <p class="section-text">Successfully completed the Cognizant Agile Methodology Certification, gaining valuable insights into addressing challenges in Agile development. Acquired knowledge in Comparative Analysis, Product Definition, Scrum, Teamwork, User Story, and Waterfall methodologies. <br> <p>
+                    <strong>Date of Certification:</strong> January 2023<br>
+                    <strong>Issuer:</strong> Forage
+                </p>            
+            </div>
+
+            <div class="certification">
+                <img src="./images/certify/Digital marketing-google.png" alt="Digital Marketing Certification"> <br>
+                <h2 class="h3 section-title" style="font-size:larger;"> The Fundamentals of Digital Marketing certification</h2>
+                <p class="section-text">"Fundamentals of Digital Marketing" certification program offered by Google Garage. Acquired a solid understanding of key concepts and strategies in the field of digital marketing like Overview of Digital Marketing, Search Engine Optimization (SEO), Search Engine Marketing (SEM) and Pay-Per-Click (PPC), Social Media Marketing (SMM), Email Marketing.
+                    <br><strong>Date of Certification:</strong> February 2023<br>
+                    <strong>Issuer:</strong> Google Garage
+                </p>
+            </div>
+
+            <div class="certification">
+                <img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~5VHYSCRDU9WR/CERTIFICATE_LANDING_PAGE~5VHYSCRDU9WR.jpeg" alt="Blogger Certification"> <br>
+                <h2 class="h3 section-title" style="font-size:larger;">Creating Business Page with Blogger - Coursera Certification</h2>
+                <p class="section-text">Successfully completed the "Creating Business Page with Blogger" certification on Coursera. This program equipped me with the necessary skills to create and manage an effective business page using the Blogger platform.
+                    <br><strong>Date of Certification:</strong> February 2023<br>
+                    <strong>Issuer:</strong> Coursera
+                </p>
+            </div>
+            
+            <div class="certification">
+                <img src="./images/certify/NM-Bigdata.png" alt="Big-Data Certification"> <br>
+                <h2 class="h3 section-title" style="font-size:larger;">Big Data Certification</h2>
+                <p class="section-text">Successfully completed the Big Data certification course conducted by Veranda Learning, under the mentorship of Naan Mudhalvan.Learning Areas: Fundamentals of Big Data and its Importance, Understanding Hadoop and MapReduce & Data Storage and Processing in Distributed Systems.
+                    <br><strong>Date of Certification:</strong> March 2023<br>
+                    <strong>Issuer:</strong>  Naan Mudhalvan conducted by Veranda Learning
+                </p>
+            </div>
+
+            <div class="certification">
+                <img src="./images/certify/NM-Cisco.png" alt="Networks certification"> <br>
+                <h2 class="h3 section-title" style="font-size:larger;">Introduction to Networks Certification</h2>
+                <p class="section-text">Successfully completed the "Introduction to Networks" certification course conducted by Cisco, under the mentorship of Naan Mudhalvan.  Learning Areas: Fundamentals of Networking Concepts, Understanding Network Protocols and Models,  Introduction to Routing and Switching & Network Security Basics.
+                    <br> <strong>Date of Certification:</strong> May 2023<br>
+                    <strong>Issuer:</strong>  Naan Mudhalvan conducted by Cisco
+                </p>
+            </div>
+
+            <div class="certification">
+                <img src="./images/certify/api.png" alt="API designer Certification"> <br>
+                <h2 class="h3 section-title" style="font-size:larger;">API Designer </h2>
+                <p class="section-text">Accomplished the "API Designer" certification, demonstrating proficiency in designing and creating effective APIs. The program, offered by API Academy, covered key principles and best practices in API design.
+                    <br><strong>Date of Certification:</strong> May 2023<br>
+                    <strong>Issuer:</strong>API Academy
+                </p>
+            </div>
+
+            <div class="certification">
+                <img src="./images/certify/low-level-design.png" alt="low-level design"> <br>
+                <h2 class="h3 section-title" style="font-size:larger;">Low-Level Design of Payment Apps</h2>
+                <p class="section-text">Awarded the "Low-Level Design of Payment Apps" certification from Scaler after successfully completing the program. This certification signifies proficiency in designing payment applications at a low-level, Understanding Payment Systems Architecture.
+                    <br><strong>Date of Certification:</strong> June 2023<br>
+                    <strong>Issuer:</strong> Scaler
+                </p>
             </div>
         </section>
     </div>
+
+
+
+      <!--#FOOTER-->
+  <footer class="footer">
+    <div class="container">
+      <p class="h1 logo">
+        <a href="#">
+          Aja<span>.</span>
+        </a>
+      </p>
+      <p style="color:deepskyblue; font-family: var(--ff-poppins);">Coding is not just a skill, it's an Art form..! 🚀 </p>
+      <p class="copyright">
+        <script>
+          var date = document.write(new Date().getFullYear());
+          document.getElementById("copyright").innerHTML = date;
+        </script>
+        &copy;<span id="copyright"></span><a href="#">Loner-Bytes</a>. <br>
+    </div>
+      </p>
+    
+  </footer>
+
+    <!--custom js link-->
+    <script src="../assets/js/script.js"></script>
 </body>
 
 </html>
