@@ -586,7 +586,7 @@
   }
   
   /*#PROJECT*/
-  .project { padding-block: var(--section-padding); }
+  /*.project { padding-block: var(--section-padding); }*/
   
   .project-list > li { margin-bottom: 25px; }
   
